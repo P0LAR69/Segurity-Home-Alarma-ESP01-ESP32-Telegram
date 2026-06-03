@@ -1,7 +1,7 @@
 /**
  * ╔══════════════════════════════════════════════════════════════════════╗
  * ║   SISTEMA ALARMA ESP01 3V3  ·  Activación por Corte de Alimentación ║
- * ║   Basado en: SEGURITY HOME · Autor: Heraldo Rosero                  ║
+ * ║   Basado en: SEGURITY HOME · Autor: LUGAR O CASA DE PERSONA                  ║
  * ║   Plataforma: ESP8266 (ESP-01)                                       ║
  * ╚══════════════════════════════════════════════════════════════════════╝
  *
@@ -244,7 +244,7 @@ void setup() {
   Serial.begin(115200);
   delay(200);
   Serial.println(F("\n════════════════════════════════════════════════════════"));
-  Serial.println(F("   SISTEMA ALARMA ESP01 3V3  ·  Heraldo Rosero"));
+  Serial.println(F("   SISTEMA ALARMA ESP01 3V3  ·  LUGAR O CASA DE PERSONA"));
   Serial.println(F("   Activación por corte/restauración de alimentación"));
   Serial.println(F("════════════════════════════════════════════════════════"));
 
@@ -644,7 +644,7 @@ void sendAlarmTelegram(const char* motivo) {
   if (strlen(cfg.grpID) <= 3) { Serial.println(F("AVISO: Sin canal configurado.")); return; }
 
   String msg  = "🚨 *¡ALARMA DE SEGURIDAD!* 🚨\n\n";
-  msg += "📍 *Casa de Heraldo Rosero*\n";
+  msg += "📍 *Casa de LUGAR O CASA DE PERSONA*\n";
   msg += "⏰ Hora: `" + String(lastAlarmTime) + "`\n";
   msg += "⚡ Motivo: `" + String(motivo) + "`\n";
   msg += "🌐 IP: `" + WiFi.localIP().toString() + "`\n\n";
