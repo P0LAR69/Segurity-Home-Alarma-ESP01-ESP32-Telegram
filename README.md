@@ -40,11 +40,4 @@
 
 ---
 
-**Autor original:** Heraldo Rosero  
-**Mejoras y organización:** Iván Dario
-
----
-
-## Licencia
-
-MIT License - Libre para uso personal y comercial.
+**Autor original:** Jonathan Cabrera  
