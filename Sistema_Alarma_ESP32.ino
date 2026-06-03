@@ -1,7 +1,7 @@
 /**
  * ╔═══════════════════════════════════════════════════════════╗
  * ║   SEGURITY HOME  ·  Sistema de Alarma ESP32 + Telegram   ║
- * ║   Autor: Heraldo Rosero                                   ║
+ * ║   Autor: Jonathan Cabrera                                  ║
  * ║   Deep Sleep añadido: 2026                                ║
  * ╚═══════════════════════════════════════════════════════════╝
  *
@@ -128,7 +128,7 @@ void setup() {
   Serial.begin(115200);
   delay(200);
   Serial.println(F("\n===================================================="));
-  Serial.println(F("   SEGURITY HOME  ·  Heraldo Rosero"));
+  Serial.println(F("   SEGURITY HOME  ·  LUGAR O CASA DE PERSONA"));
   Serial.println(F("===================================================="));
 
   // ── Detectar causa de despertar del Deep Sleep ──────────────────
@@ -427,7 +427,7 @@ void alarmFire() {
   if (getLocalTime(&ti, 500)) strftime(hora, 20, "%H:%M:%S", &ti);
 
   String msg  = "🚨 *¡ALARMA DE PÁNICO!* 🚨\n\n";
-  msg += "📍 *Casa de Heraldo Rosero*\n";
+  msg += "📍 *Casa de LUGAR O CASA DE PERSONA*\n";
   msg += "⏰ Hora: `" + String(hora) + "`\n";
   msg += "⏱ Botón mantenido 6 segundos\n\n";
   msg += "‼️ *SE REQUIERE AYUDA URGENTE* ‼️";
@@ -479,7 +479,7 @@ void tgProcess(int n) {
     if (txt == "/start") {
       String s = "👋 Hola *" + String(cfg.admNom) + "*\n\n";
       s += "🛡 *Segurity Home*\n";
-      s += "Casa de Heraldo Rosero\n\n";
+      s += "Casa de LUGAR O CASA DE PERSONA\n\n";
       s += "Usa /help para ver los comandos disponibles.";
       bot->sendMessage(cid, s, "Markdown");
 
